@@ -1,0 +1,14 @@
+<div *ngIf="activeProduct; else displayList" class="product">
+  <img class="product-image" [src]="activeProduct.image" [alt]="activeProduct.description">
+</div>
+<ng-template #displayList>
+  <div class="productsList">
+    <div class="" *ngFor="let product of products">
+      <div class="product">
+        <img class="product-image" [src]="product.image" [alt]="product.description">
+        <h1>{{product.name}}</h1>
+        <h2 class="price">${{product.price}}</h2>
+      </div>
+    </div>
+  </div>
+</ng-template>
