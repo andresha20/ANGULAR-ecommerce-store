@@ -14,7 +14,7 @@ export class ProductsComponent {
       price: 229,
       sku: 292,
       quantity: 5,
-      description: 'A description about this product',
+      description: 'A description about this product. Adventuring and learning Angular.',
       image: 'assets/images/suit1.png'
     },
     {
@@ -23,7 +23,7 @@ export class ProductsComponent {
       price: 119,
       sku: 291,
       quantity: 5,
-      description: 'A description about this product',
+      description: 'A description about this product. Adventuring and learning Angular.',
       image: 'assets/images/suit2.png'
     },
     {
@@ -32,7 +32,7 @@ export class ProductsComponent {
       price: 129,
       sku: 233,
       quantity: 5,
-      description: 'A description about this product',
+      description: 'A description about this product. Adventuring and learning Angular.',
       image: 'assets/images/suit3.png'
     },
     {
@@ -41,7 +41,7 @@ export class ProductsComponent {
       price: 299,
       sku: 234,
       quantity: 1,
-      description: 'A description about this product',
+      description: 'A description about this product. Adventuring and learning Angular.',
       image: 'assets/images/suit4.png'
     },
   ]

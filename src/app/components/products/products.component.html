@@ -7,7 +7,10 @@
       <div class="product">
         <img class="product-image" [src]="product.image" [alt]="product.description">
         <h1>{{product.name}}</h1>
+        <p>{{product?.description || 'Without a description'}}</p>
         <h2 class="price">${{product.price}}</h2>
+        <button type="button" [routerLink]="['/shop', product.id]" class="button1">Shop now&nbsp;&nbsp;<i [ngStyle]="{
+        }" class="bi bi-arrow-right"></i></button>
       </div>
     </div>
   </div>

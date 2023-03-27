@@ -3,15 +3,15 @@
     <div class="menu-wrapper">
       <div class="menu-sec-wrapper">
         <div class="menu-container" *ngFor="let item of navigationItems">
-          <p class="menu-item">{{ item }}</p>
+          <p class="menu-item" [routerLink]="item.url">{{ item.name }}</p>
         </div>
       </div>
       <div class="menu-sec-wrapper">
-        <img class="logo" src="assets/images/logo.png" alt="Logo">
+        <img class="logo" [routerLink]="''" src="assets/images/logo.png" alt="Logo">
       </div>
       <div class="menu-sec-wrapper">
           <p class="menu-item">
-            <i [ngStyle]="{
+            <i [routerLink]="'cart'" [ngStyle]="{
               'font-size': '1.7rem'
             }" class="bi bi-cart4"></i>
           </p>

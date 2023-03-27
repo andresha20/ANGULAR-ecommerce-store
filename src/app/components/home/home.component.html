@@ -4,7 +4,7 @@
     <div class="column1">
       <p>New release</p>
       <h1 class="special-text">FEEL<br>AUTHENTIC<br>Peace</h1>
-      <button type="button" class="button1">Shop now&nbsp;&nbsp;<i [ngStyle]="{
+      <button type="button" [routerLink]="'shop'" class="button1">Shop now&nbsp;&nbsp;<i [ngStyle]="{
 
       }" class="bi bi-arrow-right"></i></button>
     </div>
@@ -13,9 +13,14 @@
     </div>
   </div>
 </div>
+<div class="section">
+  <h1>What we do</h1>
+  <p>Angular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.</p>
+</div>
 <div class="banner">
   <h1 [ngStyle]="{
-    'text-align': 'center'
+    'text-align': 'center',
+    'margin-bottom': '5rem'
   }">Our <b [ngStyle]="{
     'background-color': 'orange',
     'color': 'white',
@@ -23,5 +28,12 @@
     'padding-left': '0.4rem',
     'border-radius': '0.5rem'
   }">products</b></h1>
-  <app-products></app-products>
+  <div [ngStyle]="{
+    'max-width': '70%',
+    'margin': '0 auto'
+  }">
+    <app-products></app-products>
+  </div>
 </div>
+<app-footer></app-footer>
+
