@@ -3,7 +3,7 @@
 </div>
 <ng-template #displayList>
   <div class="productsList">
-    <div class="" *ngFor="let product of products">
+    <div class="" *ngFor="let product of appService.getProducts">
       <div class="product">
         <img class="product-image" [src]="product.image" [alt]="product.description">
         <h1>{{product.name}}</h1>
