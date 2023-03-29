@@ -8,8 +8,9 @@
       <h1 class="product-title">{{product.name}}</h1>
       <p>{{product.description}}</p>
       <h2 class="price">${{product.price}}</h2>
-      <p>{{product.quantity}} unidades disponibles</p>
-      <button type="button" [routerLink]="['/shop', product.id]" class="button">Shop now&nbsp;&nbsp;<i [ngStyle]="{
+      <p>{{product.quantity}} units in stock</p>
+      <p class="notification" *ngIf="appService.isNotificationOpen">¡<b>{{product.name}}</b> agregado al carrito de compras!</p>
+      <button type="button" (click)="appService.addProduct(product)" [routerLink]="['/shop', product.id]" class="button">Add to cart&nbsp;&nbsp;<i [ngStyle]="{
       }" class="bi bi-cart4"></i></button>
     </div>
   </div>
