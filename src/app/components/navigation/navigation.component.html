@@ -10,23 +10,25 @@
         <img class="logo" [routerLink]="''" src="assets/images/logo.png" alt="Logo">
       </div>
       <div class="menu-sec-wrapper">
-          <div class="menu-item">
+          <div class="menu-item" >
             <span class="floating-number">{{ appService.getShoppingCartProducts.length }}</span>
-            <div class="cart-modal" *ngIf="appService.isCartModalOpen">
+            <div class="cart-modal" #menu *ngIf="appService.isCartModalOpen">
               <h3 class="cart-title">Products ({{ appService.getShoppingCartProducts.length}})</h3>
               <p class="cart-subtitle" *ngIf="appService.getShoppingCartProducts.length == 0; else itemsBlock">No has agregado productos a tu carrito</p>
               <ng-template #itemsBlock>
-                <div class="cart-items-container" *ngFor="let product of appService.getShoppingCartProducts">
-                  <div class="cart-item-data">
-                    <p class="cart-product-name">{{product.name}}</p>
-                    <p class="cart-subtitle">${{product.price}}</p>
-                  </div>
-                  <div class="cart-item">
-                    <img class="product-image" [src]="product.image" [alt]="product.description">
-                    <div class="cart-totals">
-                      <p class="total-switcher" (click)="appService.handleProductAction(2, product)">-</p>
-                      <p class="amount">{{product.cartQuantity}}</p>
-                      <p class="total-switcher" (click)="appService.handleProductAction(1, product)">+</p>
+                <div class="productsList">
+                  <div class="cart-items-container" *ngFor="let product of appService.getShoppingCartProducts">
+                    <div class="cart-item-data">
+                      <p class="cart-product-name">{{product.name}}</p>
+                      <p class="cart-subtitle">${{product.price}}</p>
+                    </div>
+                    <div class="cart-item">
+                      <img class="product-image" [src]="product.image" [alt]="product.description">
+                      <div class="cart-totals">
+                        <p class="total-switcher" (click)="appService.handleProductAction(2, product)">-</p>
+                        <p class="amount">{{product.cartQuantity}}</p>
+                        <p class="total-switcher" (click)="appService.handleProductAction(1, product)">+</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -42,13 +44,8 @@
             </div>
             <i (click)="openCart()" [ngStyle]="{
               'font-size': '1.7rem'
-            }" class="bi bi-cart4"></i>
+            }" class="bi bi-cart4" #toggleButton></i>
           </div>
-          <p class="menu-item">
-            <i [ngStyle]="{
-              'font-size': '1.7rem'
-            }" class="bi bi-search"></i>
-          </p>
       </div>
     </div>
   </div>

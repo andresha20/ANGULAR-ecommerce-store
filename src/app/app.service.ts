@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { Product } from './components/products/product.model';
 
 @Injectable({
@@ -49,8 +49,6 @@ export class AppService {
   isNotificationOpen: boolean = false;
   isCartModalOpen: boolean = false;
   activeProduct: Product = this.products[0];
-
-  constructor() { }
 
   addProduct(product: Product) {
     const storeProducts = this.products;

@@ -24,7 +24,7 @@
         align-items: center;
         outline: none;
         width: 100%;
-        opacity: 0.8;
+        opacity: 1;
         padding: 1rem;
         border-radius: 2rem;
         transition: 0.3s;
@@ -33,7 +33,7 @@
         color: white;
       }
       .button:hover {
-        opacity: 1;
+        background: #181818;
         cursor: pointer;
       }
     }
