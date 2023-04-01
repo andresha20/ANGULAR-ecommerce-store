@@ -3,6 +3,7 @@ A basic E-commerce store built on top of Angular to practice folder structuring,
 # DEVELOPMENT DATA:
 1. Time taken: 3 days.
 2. CLIENT only. Products have been hardcoded into an array.
+3. Learnt that SERVICES are the way to go when it comes to replicating the useContext hook in React and accessing the information globally.
 
 # SCREENSHOTS:
 ![angular2](https://user-images.githubusercontent.com/80694673/228424239-6d8de170-ef14-471c-8e9e-d7de46cb3f9b.png)
